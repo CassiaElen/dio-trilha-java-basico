@@ -1,3 +1,5 @@
+package OperacoesBasicas;
+
 public class Main {
     
      public static void main(String[] args) {
@@ -12,6 +14,19 @@ public class Main {
         listaTarefa.removerTarefa("Tarefa 1");
         
         listaTarefa.obterDescricaoTarefas();
-    }
+        
+        CarrinhoDeCompras carrinhoDeCompras = new CarrinhoDeCompras();
+        
+        carrinhoDeCompras.adicionarItem("Detergente", 2.99, 3);
+        carrinhoDeCompras.adicionarItem("Elseve Óleo extraordinario", 33.50, 1);
+        carrinhoDeCompras.adicionarItem("Toalhinhas umedecidas", 10.32, 2);
+        
+        carrinhoDeCompras.exibirItens();
+        
+        System.out.println(carrinhoDeCompras.calcularValorTotal());
+        carrinhoDeCompras.removerItem("Detergente");
+        carrinhoDeCompras.exibirItens();
+
+     }
     
 }
