@@ -16,19 +16,19 @@ public class CatalogoLivros {
     }
 
     public List<Livro> pesquisarPorAutor(String autor) {
-    List<Livro> livrosPorAutor = new ArrayList<>();
-    if (!LivrosList.isEmpty()) {
-      for (Livro l : LivrosList) {
-        if (l.getAutor().equalsIgnoreCase(autor)) {
-          livrosPorAutor.add(l);
+        List<Livro> livrosPorAutor = new ArrayList<>();
+        if (!LivrosList.isEmpty()) {
+            for (Livro l : LivrosList) {
+                if (l.getAutor().equalsIgnoreCase(autor)) {
+                    livrosPorAutor.add(l);
+                }
+            }
+            return livrosPorAutor;
+        } else {
+            throw new RuntimeException("A lista está vazia!");
         }
-      }
-      return livrosPorAutor;
-    } else {
-      throw new RuntimeException("A lista está vazia!");
     }
-  }
-    
+
     public Livro pesquisarPorTitulo(String titulo) {
         Livro livroPorTitulo = null;
         if (!LivrosList.isEmpty()) {
